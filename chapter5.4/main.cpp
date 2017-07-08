@@ -55,7 +55,7 @@ int main()
     for (int i = 0; i < tokens.size(); i++) {
         in = pipe_proc(tokens[i], in);
     }
-    FILE* file = fopen("result.out", "w+");
+    FILE* file = fopen("/home/box/result.out", "w+");
     char c;
     while (read(in, &c, 1) == 1)
         fputc(c, file);
