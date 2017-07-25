@@ -18,4 +18,6 @@ void main() {
         }
         close(in);
         fclose(out);
+        unlink(in);
+        unlink(out);
 }

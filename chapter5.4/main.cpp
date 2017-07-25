@@ -63,21 +63,3 @@ int main()
         fputc(c, file);
     fclose(file);
 }
-
-
-#include <unistd.h>
-
-
-void main() {
-        char* in_pipe = "/home/box/in.fifo";
-        char* out_pipe = "/home/box/out.fifo";
-        mkfifo(in_pipe, 0666);
-        mkfifo(out_pipe, 0666);
-        FILE* in = fopen(in_pipe, "r");
-        FILE* out = fopen(out_pipe, "w");
-        char c;
-        while (read(in, &c, 1) == 1)
-                fputc(c, out);
-        fclose(in);
-        fclose(out);
-}
