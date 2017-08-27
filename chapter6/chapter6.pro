@@ -5,4 +5,5 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     posixmq.cpp \
-    semaphore.cpp
+    semaphore.cpp \
+    psxsem.cpp
