@@ -7,4 +7,5 @@ SOURCES += main.cpp \
     posixmq.cpp \
     semaphore.cpp \
     psxsem.cpp \
-    sysvshmem.cpp
+    sysvshmem.cpp \
+    posixshmem.cpp
