@@ -14,7 +14,7 @@ int main()
     if ((key = ftok("/tmp/mem.temp", 1)) == -1)
         perror("ftok");
     int shmid;
-    if ((shmid = shmget(key, 2*1024*1024, IPC_CREAT)) == -1)
+    if ((shmid = shmget(key, 2*1024*1024, 0666 | IPC_CREAT)) == -1)
         perror("shmget");
     void* addr;
     if ((addr = shmat(shmid, NULL, 0)) == (void*)-1)
