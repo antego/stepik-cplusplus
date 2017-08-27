@@ -11,7 +11,7 @@ using namespace std;
 int main()
 {
     mqd_t id;
-    if ((id = mq_open("/test.mq", O_RDONLY | O_CREAT) == -1))
+    if ((id = mq_open("/test.mq", O_RDONLY | O_CREAT)) == -1)
         perror("mq_open");
     char msg[80];
     if (mq_receive(id, msg, 80, NULL) == -1)
